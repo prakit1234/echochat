@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - EchoChat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="logo.png" alt="EchoChat Logo" class="logo-small">
+            <span>EchoChat</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="chat.html" class="active">Chat</a>
+            <a href="profile.html">Profile</a>
+            <button id="signOutBtn" class="nav-button">Sign Out</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card chat-card">
+            <div class="chat-header">
+                <div id="userProfile" class="user-profile">
+                    <img id="userAvatar" src="default-avatar.png" alt="User Avatar">
+                    <span id="userName">Loading...</span>
+                </div>
+            </div>
+
+            <div id="chatBox" class="chat-box"></div>
+
+            <div class="input-container">
+                <input type="text" id="messageInput" placeholder="Type your message..." autocomplete="off">
+                <button id="sendBtn" class="send-button">
+                    <span>Send</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - EchoChat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="../public/logo.png" alt="EchoChat Logo" class="logo-small">
+            <span>EchoChat</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="chat.html">Chat</a>
+            <a href="profile.html" class="active">Profile</a>
+            <button id="signOutBtn" class="nav-button">Sign Out</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card profile-card">
+            <h1>Profile Settings</h1>
+            
+            <div class="profile-section">
+                <div class="avatar-section">
+                    <div class="avatar-container">
+                        <img id="currentAvatar" src="../public/default-avatar.png" alt="Profile Avatar" class="large-avatar">
+                        <div class="avatar-overlay">
+                            <label for="avatarInput" class="avatar-upload">
+                                <span>Change Photo</span>
+                            </label>
+                        </div>
+                    </div>
+                    <input type="file" id="avatarInput" accept="image/*" hidden>
+                    <p class="avatar-hint">Click to upload a new profile picture</p>
+                </div>
+
+                <div class="profile-form">
+                    <div class="input-group">
+                        <label for="displayName">Display Name</label>
+                        <input type="text" id="displayName" placeholder="Enter your display name">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" placeholder="Tell us about yourself"></textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Theme</label>
+                        <div class="theme-options">
+                            <button class="theme-option" data-theme="dark">
+                                <span class="theme-preview dark"></span>
+                                <span>Dark</span>
+                            </button>
+                            <button class="theme-option" data-theme="light">
+                                <span class="theme-preview light"></span>
+                                <span>Light</span>
+                            </button>
+                            <button class="theme-option" data-theme="purple">
+                                <span class="theme-preview purple"></span>
+                                <span>Purple</span>
+                            </button>
+                            <button class="theme-option" data-theme="green">
+                                <span class="theme-preview green"></span>
+                                <span>Green</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Notifications</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="notifications">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+
+                    <button id="saveProfileBtn" class="primary-button">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="profile.js"></script>
+</body>
+</html> 
